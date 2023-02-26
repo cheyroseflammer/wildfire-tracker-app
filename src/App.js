@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true);
-      const res = await fetch('https://eonet.gsfc.nasa.gov/api/v2.1/events?status=open&days=365');
+      const res = await fetch('https://eonet.gsfc.nasa.gov/api/v2.1/events?status=open&days=180');
       const { events } = await res.json();
 
       setEventData(events);
